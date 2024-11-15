@@ -1,11 +1,11 @@
 :root{
-    --navBarColor: grey;
-    --activeLinkColor: lightgrey;
-    --linkBorderColor: lightgrey;
-    --boxGrey: lightgrey;
-    /* --fakeGreen:;
-    --fakeBlue:;
-    --fakeRed:; */
+    --navBarColor: #303440;
+    --activeLinkColor: #4B505F;
+    --linkBorderColor: #555B69;
+    --boxGrey: #F2F2F2;
+    --fakeGreen: #338B22;
+    --fakeBlue: #3E85C1;
+    --fakeRed: #7D2508;
 }
 
 @font-face {
@@ -27,7 +27,7 @@
     justify-content: center;
     align-content: space-evenly;
     background-color: var(--navBarColor);
-    padding: 0.8rem 0;
+    padding: 0.6rem 0;
     position: fixed;
     left: 0;
     width: 100%;
@@ -35,11 +35,11 @@
 }
 
 nav>a {
-    border-radius: 2px;
+    border-radius: 1px;
     margin-right: 1.4rem;
-    padding: 10px 20px;
+    padding: 8px 16px;
     color: white;
-    font-size: 1.4rem;
+    font-size: 1rem;
     text-decoration: none;
     transition-duration: 250ms;
     transition-property: color;
@@ -54,20 +54,42 @@ a.active {
 
 .heroRow{
     background-image: url("images/img11.jpg");
-    height: 100%;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover 100%;
     background-position: center;
-    background-size: 100%;
-    background-position-y: -28vh;
-    background-position-x: 0%;
+    background-position-x: 40%;
     display: flex;
     flex-flow: column;
     height: 62vh;
     width: 100%;
+}
+
+.heroRow h3, .heroRow h1{
+    text-align: center;
+}
+
+.fullRow{
+    background-image: url("images/img13.jpg");
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center center;
+    /* background-position-x: 55%; */
+    background-position-y: 0;
+    display: flex;
+    flex-flow: column;
+    height: 30vh;
+    width: 100%;
+}
+
+.fullRow h2, .fullRow p{
+    text-align: center;
+    padding: 0 33%;
 }
 
 .threePartRow{
@@ -83,8 +105,63 @@ a.active {
     display: flex;
     position: relative;
     flex-flow: column;
+    justify-content: space-between;
     width: 28%;
-    height: 48vh;
+    /* height: 48vh; */
+    margin: 0 1%;
+    background-color: var(--boxGrey);
+}
+
+.onePartRow{
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    margin: 0 10%;
+    padding-bottom: 2vh;
+    padding-top: 4vh;
+    margin-bottom: 4%;
+}
+
+.onePartRow .card{
+    display: flex;
+    position: relative;
+    flex-flow: column;
+    justify-content: space-between;
+    width: 86%;
+    /* height: 48vh; */
+    margin: 0 1%;
+    background-color: var(--boxGrey);
+}
+
+.fourPartRow{
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    margin: 0 10%;
+    padding-bottom: 2vh;
+    padding-top: 4vh;
+}
+
+.fourPartRow .card{
+    display: flex;
+    position: relative;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+    /* height: 48vh; */
+    margin: 0 1%;
+    background-color: var(--boxGrey);
+}
+
+.fourPartRow .card:nth-of-type(1), .fourPartRow .card:nth-of-type(3){
+    display: flex;
+    position: relative;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 20%;
+    /* height: 48vh; */
     margin: 0 1%;
     background-color: var(--boxGrey);
 }
@@ -102,7 +179,7 @@ a.active {
     position: relative;
     flex-flow: column;
     width: 43%;
-    height: 48vh;
+    /* height: 48vh; */
     margin: 0 1%;
     background-color: var(--boxGrey);
 }
@@ -113,45 +190,252 @@ a.active {
     height: 18vh;
 }
 
-.card p, .card h3, .card a{
-    margin: 10px 20px;
+.fourPartRow .card-Image{
+    margin-bottom: 1vh;
+    width: 100%;
+    height: 25vh;
+    object-fit: cover;
+    object-position: center right;
+    transform: scaleX(-1);
 }
 
-.card-Button{
+.onePartRow .card-Image{
+    margin-bottom: 1vh;
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+    object-position: center right;
+}
+
+.card p, .card h3, .card a{
+    margin: 5px 20px;
+}
+
+.card .card-Button{
+    /* position: relative; */
     align-self: center;
     color: white;
-    padding: 13px 10%;
+    padding: 10px 8%;
     border-radius: 5px;
-    position: absolute;
-    margin-top: auto;
-    bottom: 2vh;
-    font-size: 1.2rem;
+    margin-bottom: 2vh;
+    margin-top: 1vh;
+    font-size: 1rem;
+}
+
+p{
+    font-size: .8rem;
 }
 
 .threePartRow .card:nth-child(1) .card-Button{
-    background-color: green;
+    background-color: var(--fakeGreen);
 }
 
 .threePartRow .card:nth-child(1) h3{
-    color: green;
+    color: var(--fakeGreen);
 }
 
 .threePartRow .card:nth-child(2) .card-Button{
-    background-color: blue;
+    background-color: var(--fakeBlue);
 }
 
 .threePartRow .card:nth-child(2) h3{
-    color: blue;
+    color: var(--fakeBlue);
 }
 
-.card:nth-child(3) .card-Button{
-    background-color: red;
+.threePartRow .card:nth-child(3) .card-Button{
+    background-color: var(--fakeRed);
 }
 
-.card:nth-child(3) h3{
-    color: red;
+.threePartRow .card:nth-child(3) h3{
+    color: var(--fakeRed);
 }
 
 .twoPartRow .card h3{
     align-self: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+.twoPartRow .card .card-Button{
+    align-self: flex-end;
+    padding: 10px 6%;
+    margin: 1vh 10%;
+    margin-bottom: 3vh;
+    background-color: white;
+    color: black;
+    border: 1px black solid;
+    border-radius: 10px;
+}
+
+.fourPartRow .card .card-Button{
+    padding: 10px 6%;
+    margin: 1vh 10%;
+    margin-bottom: 3vh;
+    background-color: white;
+    color: black;
+    border: 1px black solid;
+    border-radius: 10px;
+}
+
+.onePartRow .card .card-Button{
+    align-self: flex-start;
+    padding: 10px 3%;
+    margin: 1vh 3%;
+    margin-bottom: 3vh;
+    background-color: white;
+    color: black;
+    border: 1px black solid;
+    border-radius: 10px;
+}
+
+.contactUs{
+    padding-top: 5%;
+    background-image: url("images/img14.jpg");
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center center;
+    /* background-position-x: 55%; */
+    background-position-y: 0;
+    display: flex;
+    flex-flow: column;
+    height: 55vh;
+    width: 100%;
+}
+
+.contactUs .contactUs-param{
+    background-image: url("images/img14.jpg");
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center center;
+    /* background-position-x: 55%; */
+    background-position-y: 0;
+    display: flex;
+    flex-flow: column;
+    height: 55vh;
+    width: 50%;
+}
+
+.column{
+    display: flex;
+    flex-flow: column;
+    margin-right: 5%;
+    width: 33%;
+}
+
+form{
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    justify-content: center;
+}
+
+.contactUs p {
+    padding: 3%;
+    margin: 3vh 5%;
+    width: 71%;
+    background: none;
+    backdrop-filter: brightness(180%);
+    backdrop-filter: blur(200%);
+    opacity: 80%;
+    border: none;
+    border-radius: 3px;
+}
+
+input{
+    padding: 2%;
+    background: none;
+    backdrop-filter: brightness(180%);
+    backdrop-filter: blur(200%);
+    opacity: 80%;
+    border: none;
+    border-radius: 3px;
+}
+
+input::placeholder{
+    color: black;
+    top: 0;
+}
+
+textarea{
+    padding: 2%;
+    width: 33%;
+    background: none;
+    backdrop-filter: brightness(180%);
+    backdrop-filter: blur(200%);
+    opacity: 80%;
+    border: none;
+    border-radius: 3px;
+    resize: none;
+}
+
+textarea::placeholder{
+    color: black;
+    top: 0;
+}
+
+button{
+    align-self: flex-end;
+    padding: 10px 6%;
+    margin: 3vh 10%;
+    margin-right: 31%;
+    margin-bottom: 3vh;
+    background-color: black;
+    color: white;
+    border: 1px white solid;
+    border-radius: 10px;
+}
+
+h2{
+    color: white;
+    text-shadow: 2px 2px grey;
+}
+
+.heroRow h1{
+    color: white;
+    text-shadow: 2px 2px black;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.heroRow h3{
+    color: white;
+    font-weight: 500;
+}
+
+.fullRow p{
+    color: white;
+    margin-top: 1%;
+}
+
+footer{
+    display: flex;
+    flex-flow: column;
+    padding: 5%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+    padding-bottom: 1%;
+}
+
+hr{
+    width: 100%;
+}
+
+.scrollButton{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    background-image: url(images/img0.png);
+    background-repeat: no-repeat;
+    z-index: 1;
 }
