@@ -195,8 +195,6 @@ a.active {
     width: 100%;
     height: 25vh;
     object-fit: cover;
-    object-position: center right;
-    transform: scaleX(-1);
 }
 
 .onePartRow .card-Image{
