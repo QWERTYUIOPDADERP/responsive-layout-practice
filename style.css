@@ -295,7 +295,7 @@ a{
     align-items: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: auto 100%;
+    background-size: 100% 100%;
     background-position: center center;
     /* background-position-x: 55%; */
     background-position-y: 0;
@@ -306,7 +306,6 @@ a{
 }
 
 .contactUs .contactUs-param{
-    background-image: url("images/img14.jpg");
     justify-content: center;
     align-items: center;
     background-attachment: fixed;
