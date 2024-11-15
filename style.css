@@ -58,7 +58,7 @@ a.active {
     align-items: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: cover 100%;
+    background-size: cover;
     background-position: center;
     background-position-x: 40%;
     display: flex;
@@ -343,7 +343,6 @@ form{
     width: 71%;
     background: none;
     backdrop-filter: brightness(180%);
-    backdrop-filter: blur(200%);
     opacity: 80%;
     border: none;
     border-radius: 3px;
@@ -353,7 +352,6 @@ input{
     padding: 2%;
     background: none;
     backdrop-filter: brightness(180%);
-    backdrop-filter: blur(200%);
     opacity: 80%;
     border: none;
     border-radius: 3px;
@@ -369,7 +367,6 @@ textarea{
     width: 33%;
     background: none;
     backdrop-filter: brightness(180%);
-    backdrop-filter: blur(200%);
     opacity: 80%;
     border: none;
     border-radius: 3px;
